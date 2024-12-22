@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-  # Возвращает полный заголовок на основе заголовка страницы.
+  # Returns the full title based on the page title.
   def full_title(page_title = '')
     base_title = "Ruby on Rails Tutorial Sample App"
     if page_title.empty?
