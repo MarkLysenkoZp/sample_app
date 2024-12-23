@@ -1,24 +1,46 @@
-# README
+Deployment Instructions
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Step 1: Cloning the Project
 
-Things you may want to cover:
+1. Clone the project repository:
+    
+   Run: git clone https://github.com/MarkLysenkoZp/sample_app.git 
 
-* Ruby version
+2. Navigate to the project folder:
 
-* System dependencies
+   Example: cd  project/sample_app
 
-* Configuration
+Step 2: Installing Gems
 
-* Database creation
+1. Ensure that the correct versions of Ruby and Bundler are installed.
+2. Install all required gems
 
-* Database initialization
+  Run  bundle install
 
-* How to run the test suite
+If you encounter issues with Bundler, install the required version:
 
-* Services (job queues, cache servers, search engines, etc.)
+  Example:  gem install bundler -v "2.4.22"
 
-* Deployment instructions
+Step 3: Running Database Migrations
 
-* ...
+1. Create the database (if not already created):
+
+   Run: rails db:create
+
+2. Run the migrations:
+
+    Run: rails db:migrate
+
+Step 4: Running Tests
+
+1. Apply the migrations to the test database:
+
+    Run: rails db:migrate RAILS_ENV=test
+
+2. Run the test
+
+   Run: rails test
+
+For RSpec:
+
+  Run: rspec
