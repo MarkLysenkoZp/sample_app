@@ -3,12 +3,13 @@
 
 /* mixins, variables, etc. */
 
-$gray-medium-light: #eaeaea;
+$gray-medium-light: #000000;
 
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 90px;
+  background-color: #e0e0e0;
 }
 
 section {
@@ -96,3 +97,15 @@ footer {
     }
   }
 }
+
+ /* logo position */
+.positioned-up {
+  position: relative;
+  top: -266px;
+  left: 100px;
+}
+
+
+
+
+
