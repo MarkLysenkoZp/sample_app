@@ -8,7 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.1.2'
-gem 'bcrypt', '3.1.11'
+gem 'bcrypt', '3.1.16'
 gem 'faker', '1.7.3'
 # Use this for pagination of users on index page
 gem 'will_paginate', '3.1.5'
@@ -37,8 +37,6 @@ gem 'coffee-rails', '4.2.2'
 gem 'turbolinks', '5.0.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '2.7.0'
-
-gem 'bcrypt-ruby'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
