@@ -108,6 +108,7 @@ footer {
 
 
 /* Style your button*/
+
 .btn-primary {
   position: relative;
   display: inline-block;
@@ -142,20 +143,164 @@ footer {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(0); 
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Плавное появление */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth emergence */
   opacity: 0;
   z-index: 0;
 }
 
 .btn-primary:hover::before {
-  transform: translate(-50%, -50%) scale(1); /* Увеличение волны */
-  opacity: 1; /* Волна становится видимой */
+  transform: translate(-50%, -50%) scale(1); /* Wave increase */
+  opacity: 1; /* The wave becomes visible */
 }
 
-/* Эффект нажатия */
 .btn-primary:active {
-  transform: translateY(3px); /* Анимация при нажатии */
+  transform: translateY(3px); /* Animation when pressed */
 }
 
 
-  
+
+/* About button */
+.about-link {
+  position: relative;
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #000000; 
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #000000; 
+  border-radius: 8px; 
+  background-color: transparent; 
+  cursor: pointer;
+  transition: all 0.3s ease; 
+  overflow: hidden;
+}
+
+.about-link:hover {
+  color: #ffffff; 
+  background-color: #000000; 
+}
+
+.about-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0); 
+  transition: transform 0.5s ease, opacity 0.5s ease; 
+  opacity: 0;
+  z-index: 0;
+}
+
+.about-link:hover::before {
+  transform: translate(-50%, -50%) scale(1); 
+  opacity: 1;
+}
+
+.about-link:active {
+  transform: translateY(3px); 
+}
+
+
+/* Contact button */
+.contact-link {
+  position: relative;
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #000000; 
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #000000; 
+  border-radius: 8px; 
+  background-color: transparent; 
+  cursor: pointer;
+  transition: all 0.3s ease; 
+  overflow: hidden;
+}
+
+.contact-link:hover {
+  color: #ffffff; 
+  background-color: #000000; 
+}
+
+.contact-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0); 
+  transition: transform 0.5s ease, opacity 0.5s ease; 
+  opacity: 0;
+  z-index: 0;
+}
+
+.contact-link:hover::before {
+  transform: translate(-50%, -50%) scale(1); 
+  opacity: 1;
+}
+
+.contact-link:active {
+  transform: translateY(3px); 
+}
+
+
+/* News button */
+.news-link {
+  position: relative;
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #000000; 
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #000000; 
+  border-radius: 8px; 
+  background-color: transparent; 
+  cursor: pointer;
+  transition: all 0.3s ease; 
+  overflow: hidden;
+}
+
+.news-link:hover {
+  color: #ffffff; 
+  background-color: #000000; 
+}
+
+.news-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0); 
+  transition: transform 0.5s ease, opacity 0.5s ease; 
+  opacity: 0;
+  z-index: 0;
+}
+
+.news-link:hover::before {
+  transform: translate(-50%, -50%) scale(1); 
+  opacity: 1;
+}
+
+.news-link:active {
+  transform: translateY(3px); 
+}
