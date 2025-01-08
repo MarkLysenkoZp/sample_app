@@ -54,7 +54,6 @@ p {
   line-height: 1.7em;
 }
 
-
 /* header */
 
 #logo {
@@ -77,7 +76,7 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
+    border-top: 1px solid $gray-medium-light;
   color: $gray-light;
   a {
     color: $gray;
@@ -105,7 +104,156 @@ footer {
   left: 100px;
 }
 
+/* Style your button*/
 
+.btn-primary {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #000000; 
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #000000; 
+  border-radius: 8px; 
+  background-color: transparent; 
+  cursor: pointer;
+  transition: all 0.3s ease; 
+  overflow: hidden;
+}
 
+.btn-primary:hover {
+  color: #ffffff; 
+  background-color: #000000; 
+}
 
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0); 
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth emergence */
+  opacity: 0;
+  z-index: 0;
+}
 
+.btn-primary:hover::before {
+  transform: translate(-50%, -50%) scale(1); /* Wave increase */
+  opacity: 1; /* The wave becomes visible */
+}
+
+.btn-primary:active {
+  transform: translateY(3px); /* Animation when pressed */
+}
+
+/* New navbar buttons*/
+
+.nav-btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px; 
+  font-size: 13px; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #000000; 
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #000000; 
+  border-radius: 8px; 
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+  margin: 10px; 
+  text-align: center;
+  width: 115px;
+  height: 40px;  
+}
+
+.nav-btn:hover {
+  color: #ffffff; 
+  background-color: #000000; 
+}
+
+.nav-btn::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  z-index: 0;
+}
+
+.nav-btn:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.nav-btn:active {
+  transform: translateY(3px); 
+}
+
+/* New footer buttons*/
+
+.rect-btn {
+  position: relative;
+  display: inline-block;
+  padding: 12px 40px;
+  font-size: 14px; 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #fdfdfd;
+  border-radius: 8px; 
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  margin: 10px; 
+  width: 103px;
+  height: 45px;  
+  text-align: center; 
+  line-height: 50px; 
+}
+
+.rect-btn:hover {
+  color: #ffffff; 
+  background-color: #000000; 
+}
+
+.rect-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  z-index: 0;
+}
+
+.rect-btn:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.rect-btn:active {
+  transform: translateY(3px);
+}
