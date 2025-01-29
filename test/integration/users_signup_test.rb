@@ -11,6 +11,13 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                    password_confirmation: "bar" } }
     end
     assert_template 'users/new'
+
+    
+    # checking the display of form validation errors
+    assert_select 'li', "Name can't be blank"
+    assert_select 'li', "Email is invalid"
+    assert_select 'li', "Password is too short (minimum is 6 characters)"
+    assert_select 'li', "Password confirmation doesn't match Password"
   end
 
 
