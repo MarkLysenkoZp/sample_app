@@ -40,7 +40,7 @@ class UsersController < ApplicationController
     end
   end
 
-  private
+
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
@@ -65,7 +65,9 @@ class UsersController < ApplicationController
       flash[:success] = "User deleted"
       redirect_to users_url
     end
-
+  
+    private
+  
     def admin_user
       redirect_to(root_url) unless current_user.admin?
     end
