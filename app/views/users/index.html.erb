@@ -1,12 +1,12 @@
 <% provide(:title, 'All users') %>
 
-<h1 class="text-center">Список пользователей</h1>
+<h1 class="text-center">User List</h1>
 
 <!-- User search form -->
 <div class="mb-4 text-center">
   <%= form_with(url: users_path, method: :get, local: true, class: "form-inline d-flex justify-content-center") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Введите имя пользователя", class: "form-control mr-2" %>
-    <%= submit_tag "Искать", class: "btn btn-primary" %>
+    <%= text_field_tag :search, params[:search], placeholder: "Enter username", class: "form-control mr-2" %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
 </div>
 
