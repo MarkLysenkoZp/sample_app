@@ -406,3 +406,31 @@ form .footer-text {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+
+
+.form-inline.d-flex.justify-content-center {
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  margin-left: 5px;
+}
+
+.form-inline.d-flex.justify-content-center .form-control {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 8px 3px;
+}
+
+.form-inline.d-flex.justify-content-center .form-control:focus {
+  border: 1px solid #007bff;
+}
+
+.form-inline.d-flex.justify-content-center .btn.btn-primary {
+  border-radius: 5px;
+  margin-left: 10px;
+}
