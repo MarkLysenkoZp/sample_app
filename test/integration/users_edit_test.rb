@@ -38,8 +38,13 @@ class UsersEditTest < ActionDispatch::IntegrationTest
 
   test "successful edit with friendly forwarding" do
     get edit_user_path(@user)
+
+    # Check that the forwarding URL is saved (indirectly via redirect)
+    assert_equal edit_user_url(@user), session[:forwarding_url] rescue nil
+
     log_in_as(@user)
     assert_redirected_to edit_user_path(@user)
+    
     name  = "Foo Bar"
     email = "foo@bar.com"
     patch user_path(@user), params: { user: { name:  name,
@@ -51,5 +56,9 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     @user.reload
     assert_equal name,  @user.name
     assert_equal email, @user.email
+
+    # Check that the forwarding URL is no longer saved (indirectly via re-entry)
+    log_in_as(@user)
+    assert_redirected_to @user
   end
 end
