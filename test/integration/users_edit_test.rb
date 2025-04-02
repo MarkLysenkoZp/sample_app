@@ -61,4 +61,33 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     log_in_as(@user)
     assert_redirected_to @user
   end
+
+  test "layout links for non-logged-in user" do
+    get root_path
+    assert_template 'static_pages/home'
+
+    # Checking for links in the header and footer
+    assert_select "a[href=?]", root_path, count: 2 # "Home" logo and link
+    assert_select "a[href=?]", help_path
+    assert_select "a[href=?]", about_path
+    assert_select "a[href=?]", contact_path
+    assert_select "a[href=?]", login_path
+
+    assert_select "a[href=?]", login_path, count: 1
+    assert_select "a[href=?]", user_path(@user), count: 0
+  end
+
+  test "layout links for logged-in user" do
+    log_in_as(@user)  # Use the helper to log in
+    get root_path
+
+    # Check that the standard links are present
+    assert_select "a[href=?]", root_path, count: 2  
+    assert_select "a[href=?]", help_path
+    assert_select "a[href=?]", about_path
+    assert_select "a[href=?]", contact_path
+
+    assert_select "a[href=?]", logout_path
+    assert_select "a[href=?]", user_path(@user)
+  end
 end
