@@ -8,12 +8,14 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.1.2'
-gem 'bcrypt', '3.1.11'
+gem 'bcrypt', '3.1.16'
 gem 'faker', '1.7.3'
 # Use this for pagination of users on index page
 gem 'will_paginate', '3.1.5'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'bootstrap-sass', '3.4.1'
+gem 'jquery-rails'
+
 
 # Use this to handle image uploading (13.4.1)
 gem 'carrierwave',             '1.3.2'
@@ -37,8 +39,6 @@ gem 'coffee-rails', '4.2.2'
 gem 'turbolinks', '5.0.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '2.7.0'
-
-gem 'bcrypt-ruby'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
@@ -72,6 +72,7 @@ group :test do
   gem 'minitest-reporters', '1.1.14'
   gem 'guard', '2.13.0'
   gem 'guard-minitest', '2.4.4'
+  gem 'minitest', '~> 5.10.3'
 end
 
 group :production do
