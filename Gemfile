@@ -14,6 +14,8 @@ gem 'faker', '1.7.3'
 gem 'will_paginate', '3.1.5'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'bootstrap-sass', '3.4.1'
+gem 'jquery-rails'
+
 
 # Use this to handle image uploading (13.4.1)
 gem 'carrierwave',             '1.3.2'
@@ -70,6 +72,7 @@ group :test do
   gem 'minitest-reporters', '1.1.14'
   gem 'guard', '2.13.0'
   gem 'guard-minitest', '2.4.4'
+  gem 'minitest', '~> 5.10.3'
 end
 
 group :production do
