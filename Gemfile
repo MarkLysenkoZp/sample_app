@@ -56,6 +56,7 @@ group :development, :test do
   #gem 'capybara', '~> 2.13'
   #gem 'selenium-webdriver'
   gem 'sqlite3', '1.3.13'
+  gem 'letter_opener'
 end
 
 group :development do
