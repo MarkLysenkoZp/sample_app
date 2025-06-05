@@ -47,9 +47,9 @@
 
   // Generate a grid of hexagons to fill the canvas
   function createHexGrid(width, height) {
-    const size = 20; // Radius of the hexagon
-    const distX = Math.sqrt(3) * size; // Horizontal distance between hex centers
-    const distY = size * 1.5;          // Vertical distance between hex centers
+    const size = 10; // Radius of the hexagon
+    const distX = Math.sqrt(1) * size; // Horizontal distance between hex centers
+    const distY = size * 1;          // Vertical distance between hex centers
     const hexes = [];
 
     // Loop through grid positions
@@ -78,7 +78,7 @@
 
     // Fill and border colors
     const fill = `rgba(200, 200, 200, ${a.toFixed(2)})`;
-    const stroke = 'rgba(0, 0, 0, 0.15)';
+    const stroke = 'rgba(255, 255, 255, 0.15)';
 
     // Start drawing path
     ctx.beginPath();
@@ -102,3 +102,5 @@
     ctx.stroke();
   }
 })(jQuery);
+
+
