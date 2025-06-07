@@ -1,16 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
     const toggleBtn = document.getElementById("theme-toggle");
-    const bg = document.getElementById("animated-background");
-    const currentTheme = localStorage.getItem("theme") || "light";
+    const body = document.body;
 
-    bg.classList.add(`${currentTheme}-mode`);
-    toggleBtn.textContent = currentTheme === "dark" ? "☀️" : "🌙";
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme == 'dark') {
+      body.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️ Light Mode';
+    }
 
-    toggleBtn.addEventListener("click", () => {
-      const isDark = bg.classList.contains("dark-mode");
-      bg.classList.toggle("dark-mode", !isDark);
-      bg.classList.toggle("light-mode", isDark);
-      toggleBtn.textContent = isDark ? "🌙" : "☀️";
-      localStorage.setItem("theme", isDark ? "light" : "dark");
-    });
-  });
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode')
+
+      if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        toggleBtn.textContent =  '☀️ Light Mode';
+      }else{
+        localStorage.setItem('theme', 'light');
+        toggleBtn.textContent = '🌙 Dark Mode';
+      }
+    }
+    );
+});
