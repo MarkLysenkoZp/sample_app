@@ -154,71 +154,107 @@ aside {
 
 form {
   max-width: 400px;
-  margin: 50px auto;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.2); 
-  backdrop-filter: blur(15px); 
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 
-              inset 0 -2px 8px rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  font-family: 'Poppins', sans-serif; 
-  color: #333;
+  margin: 60px auto;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+  font-family: 'Inter', sans-serif;
+  color: #111;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"] {
+  margin-top: 20px; // или 24px — подбирай визуально
+}
+
+body.dark-mode form {
+  background: rgba(30, 30, 30, 0.85);
+  color: #f2f2f2;
+  border-color: #444;
 }
 
 form h1 {
+  font-size: 24px;
   text-align: center;
-  font-size: 32px;
-  color: #333;
-  margin-bottom: 20px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  font-weight: 600;
+  color: inherit;
+}
+
+form label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+  font-size: 14px;
+  color: inherit;
 }
 
 form input[type="text"],
 form input[type="email"],
 form input[type="password"] {
   width: 100%;
-  padding: 12px;
-  margin: 15px 0;
-  border: none;
-  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
   font-size: 14px;
-  background: rgba(255, 255, 255, 0.6);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1), 
-              0 1px 2px rgba(255, 255, 255, 0.8);
-  transition: all 0.3s ease;
+  transition: border-color 0.2s ease;
+  color: #111;
 }
 
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form input[type="password"]:focus {
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2), 
-              0 4px 8px rgba(0, 123, 255, 0.4);
+body.dark-mode form input[type="text"],
+body.dark-mode form input[type="email"],
+body.dark-mode form input[type="password"] {
+  background-color: #444;
+  border-color: #666;
+  color: #f2f2f2;
+}
+
+form input:focus {
+  border-color: #007bff;
   outline: none;
 }
 
+form .checkbox.inline {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+form .checkbox.inline input {
+  margin-right: 8px;
+}
+
+form .btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
 form .footer-text {
-  text-align: center;
-  font-size: 12px;
   margin-top: 20px;
-  color: rgba(51, 51, 51, 0.7);
+  font-size: 13px;
+  text-align: center;
+  color: rgba(100, 100, 100, 0.8);
 }
 
 #error_explanation {
   color: red;
+  font-size: 14px;
+  margin-bottom: 20px;
+
   ul {
-    color: rgb(0, 0, 0);
-    margin: 0 0 30px 0;
+    margin-top: 10px;
+    padding-left: 20px;
+    color: inherit;
   }
 }
 
-.field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
-  }
-}
 
  /* logo position */
 .positioned-up {
@@ -410,29 +446,47 @@ form .footer-text {
 /* User search*/
 
 .form-inline.d-flex.justify-content-center {
-  background-color: #f8f9fa;
-  border-radius: 15px;
-  padding: 10px 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 16px 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  margin: 40px auto;
+  max-width: 600px;
+  transition: all 0.3s ease;
 }
 
 .form-inline.d-flex.justify-content-center .form-control {
+  flex: 1;
   border: none;
   outline: none;
-  box-shadow: none;
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 8px 3px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 14px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-inline.d-flex.justify-content-center .form-control:focus {
-  border: 1px solid #007bff;
+  border: 1px solid #0d6efd;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
 }
 
 .form-inline.d-flex.justify-content-center .btn.btn-primary {
-  border-radius: 5px;
-  margin-left: 10px;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-left: 12px;
+  font-weight: 500;
+  background-color: #0d6efd;
+  border: none;
+  box-shadow: 0 2px 6px rgba(13, 110, 253, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-inline.d-flex.justify-content-center .btn.btn-primary:hover {
+  background-color: #0b5ed7;
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.4);
 }
 
 
