@@ -506,3 +506,122 @@ a {
   height: 100%;
   overflow: hidden;
 }
+
+/* DarkMode*/
+
+
+body.dark-mode {
+  background-color: #121212;
+  color: #000000;
+
+  a {
+    color: #9e384e;
+
+    &:hover {
+      color: lighten(#f8f9fa, 10%);
+    }
+  }
+
+  .btn,
+  .form-control,
+  .list-group-item,
+  .form-inline.d-flex.justify-content-center .form-control {
+    background-color: #333;
+    color: #f8f9fa;
+    background-color: #555;
+  }
+
+  .btn-primary,
+  .nav-btn,
+  .rect-btn {
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: transparent;
+
+    &:hover {
+      background-color: #ffffff;
+      color: #000000;
+    }
+  }
+
+  .pagination li.active a {
+    background-color: #f8f9fa;
+    color: #000000;
+  }
+
+  footer {
+    border-top: 1px solid #444;
+    color: #bbb;
+
+    a {
+      color: #fff;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .form-inline.d-flex.justify-content-center {
+    background-color: #222;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+  }
+
+  .list-group li {
+    background-color: #1e1e1e;
+    border-color: #333;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+
+    &:hover {
+      background-color: #2a2a2a;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    }
+  }
+    form {
+      background: rgba(40,40,40, 0.4);
+      color: #f8f9fa;
+      border: 1px solid rgba(255, 255, 255, 0.2) ;
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        background:  rgba(60,60,60, 0.6);
+        color: #f8f9fa;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4),
+                  0 1px 2px rgba(255, 255, 255, 0.2);;
+      }
+input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      background: rgba(80, 80, 80, 0.9);
+      box-shadow: inset 0 2px 6px rgba(255, 255, 255, 0.15),
+                  0 4px 8px rgba(0, 123, 255, 0.4);
+    }
+
+    .footer-text {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+/* === Animated background per theme === */
+body.light-mode #animated-background {
+  background-color: #f8f9fa;
+}
+
+body.dark-mode #animated-background {
+  background-color: #000000;
+}
+
+/* Smooth transitions */
+body,
+.btn,
+.form-control,
+.list-group-item,
+form,
+a,
+.pagination a,
+footer,
+#animated-background {
+  transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
