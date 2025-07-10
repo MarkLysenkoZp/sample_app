@@ -1,5 +1,5 @@
 (function ($) {
-  $(document).ready(function () {
+  document.addEventListener("turbolinks:load", function () {
     $('.animated-background').each(function () {
       setupAnimatedGradient($(this));
     });

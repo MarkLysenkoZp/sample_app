@@ -512,10 +512,10 @@ a {
 
 body.dark-mode {
   background-color: #121212;
-  color: #f8f9fa;
+  color: #000000;
 
   a {
-    color: #f8f9fa;
+    color: #9e384e;
 
     &:hover {
       color: lighten(#f8f9fa, 10%);
