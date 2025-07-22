@@ -181,6 +181,12 @@ form .footer-text {
   }
 }
 
+body.dark-mode .btn-primary, body.dark-mode .nav-btn, body.dark-mode .rect-btn {
+    color: #000000;
+    border-color: #000000;
+    background-color: transparent;
+}
+
 
  /* logo position */
 .positioned-up {

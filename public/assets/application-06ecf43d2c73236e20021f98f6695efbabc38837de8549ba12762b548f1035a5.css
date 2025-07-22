@@ -141,10 +141,7 @@ hr {
   height: 0;
 }
 
-/* line 224, /home/mark/.rvm/gems/ruby-3.2.4/gems/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/_normalize.scss */
-pre {
-  overflow: auto;
-}
+
 
 /* line 232, /home/mark/.rvm/gems/ruby-3.2.4/gems/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/_normalize.scss */
 code,
@@ -2316,20 +2313,6 @@ kbd kbd {
   box-shadow: none;
 }
 
-/* line 41, /home/mark/.rvm/gems/ruby-3.2.4/gems/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/_code.scss */
-pre {
-  display: block;
-  padding: 9.5px;
-  margin: 0 0 10px;
-  font-size: 13px;
-  line-height: 1.428571429;
-  color: #333333;
-  word-break: break-all;
-  word-wrap: break-word;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
 /* line 55, /home/mark/.rvm/gems/ruby-3.2.4/gems/bootstrap-sass-3.4.1/assets/stylesheets/bootstrap/_code.scss */
 pre code {
   padding: 0;
@@ -8762,15 +8745,7 @@ button.close {
 /* mixins, variables, etc. */
 /* miscellaneous */
 /* line 16, /home/mark/project/workspace/Ruby_sample_project/app/assets/stylesheets/custom.css.scss */
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+
 
 /* universal */
 /* line 26, /home/mark/project/workspace/Ruby_sample_project/app/assets/stylesheets/custom.css.scss */
