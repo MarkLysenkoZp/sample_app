@@ -1,0 +1,196 @@
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+    border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+/* sidebar */
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravarar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravarar_edit {
+  margin-top: 15px;
+}
+
+/* form */
+
+form {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+  font-family: 'Inter', sans-serif;
+  color: #111;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"] {
+  margin-top: 20px; // или 24px — подбирай визуально
+}
+
+body.dark-mode form {
+  background: rgba(30, 30, 30, 0.85);
+  color: #f2f2f2;
+  border-color: #444;
+}
+
+form h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 600;
+  color: inherit;
+}
+
+form label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+  font-size: 14px;
+  color: inherit;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  color: #111;
+}
+
+body.dark-mode form input[type="text"],
+body.dark-mode form input[type="email"],
+body.dark-mode form input[type="password"] {
+  background-color: #444;
+  border-color: #666;
+  color: #f2f2f2;
+}
+
+form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+form .checkbox.inline {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+form .checkbox.inline input {
+  margin-right: 8px;
+}
+
+form .btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+form .footer-text {
+  margin-top: 20px;
+  font-size: 13px;
+  text-align: center;
+  color: rgba(100, 100, 100, 0.8);
+}
+
+#error_explanation {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 20px;
+
+  ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: inherit;
+  }
+}
+
+body.dark-mode .btn-primary, body.dark-mode .nav-btn, body.dark-mode .rect-btn {
+    color: #000000;
+    border-color: #000000;
+    background-color: transparent;
+}
+
+
+ /* logo position */
+.positioned-up {
+  position: relative;
+  top: -266px;
+  left: 100px;
+}
