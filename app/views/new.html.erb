@@ -1,0 +1,5 @@
+<%= form_with url: password_resets_path, local: true do |f| %>
+  <%= label_tag :email %>
+  <%= text_field_tag :email, params[:email] %>
+  <%= submit_tag "Send password reset email", class: "btn btn-primary" %>
+<% end %>
