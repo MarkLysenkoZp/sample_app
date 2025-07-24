@@ -40,6 +40,7 @@ gem 'turbolinks', '5.0.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '2.7.0'
 
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -56,6 +57,7 @@ group :development, :test do
   #gem 'capybara', '~> 2.13'
   #gem 'selenium-webdriver'
   gem 'sqlite3', '1.3.13'
+  gem 'letter_opener', '1.7.0'
 end
 
 group :development do
